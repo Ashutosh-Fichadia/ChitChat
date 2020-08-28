@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="740.0" prefWidth="1370.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="allpages.Controllerhome">
+   <children>
+      <ImageView fitHeight="740.0" fitWidth="1375.0">
+         <image>
+            <Image url="@../Green%20and%20Blue.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="1070.0" layoutY="31.0" prefHeight="36.0" prefWidth="141.0" text="Analysis">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fileselect" layoutX="24.0" layoutY="637.0" prefHeight="25.0" prefWidth="717.0" promptText="File name" style="-fx-background-radius: 50;" />
+      <Button fx:id="importfile" layoutX="748.0" layoutY="633.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="36.0" style="-fx-background-radius: 50;">
+         <graphic>
+            <FontAwesomeIcon glyphName="PAPERCLIP" size="20" />
+         </graphic></Button>
+      <Button fx:id="sendfile" layoutX="794.0" layoutY="637.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="95.0" styleClass="sendf" stylesheets="@../application/application.css" text="Send File" textFill="#fcf9f9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <TextField fx:id="txtmsg" layoutX="24.0" layoutY="671.0" prefHeight="25.0" prefWidth="760.0" promptText="Type Your Message" style="-fx-background-radius: 50;" />
+      <Button fx:id="btnsend" layoutX="794.0" layoutY="668.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="95.0" styleClass="send" stylesheets="@../application/application.css" text="Send" textFill="#f5f2f2">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <TextArea fx:id="txtchat" layoutX="21.0" layoutY="87.0" prefHeight="538.0" prefWidth="869.0">
+         <font>
+            <Font size="20.0" />
+         </font></TextArea>
+      <Label fx:id="typing" layoutX="776.0" layoutY="54.0" prefHeight="34.0" prefWidth="113.0" text="typing......">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="urnm" alignment="CENTER_RIGHT" layoutX="1220.0" prefHeight="35.0" prefWidth="141.0" style="-fx-background-color: transparent;">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label fx:id="oppnm" layoutX="27.0" layoutY="51.0" prefHeight="40.0" prefWidth="127.0" text="Ashutosh">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="online" layoutX="189.0" layoutY="54.0" prefHeight="34.0" prefWidth="67.0" text="Online">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Circle fx:id="green" fill="#02f72b" layoutX="171.0" layoutY="71.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7f9fa" height="348.0" layoutX="927.0" layoutY="88.0" opacity="0.43" stroke="#0d00002e" strokeType="INSIDE" width="426.0" />
+      <PieChart fx:id="pie" layoutX="964.0" layoutY="111.0" prefHeight="303.0" prefWidth="353.0" />
+      <Button fx:id="btnsave" layoutX="28.0" layoutY="701.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="127.0" styleClass="send" stylesheets="@../application/application.css" text="  Save Chat" textFill="#fffdfd">
+         <graphic>
+            <FontAwesomeIcon fill="#f5f3f3" glyphName="CLOUD_DOWNLOAD" size="20" />
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnimport" layoutX="160.0" layoutY="701.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="127.0" styleClass="send" stylesheets="@../application/application.css" text="  Import Chat" textFill="#fffdfd">
+         <graphic>
+            <FontAwesomeIcon fill="#f5f3f3" glyphName="CLOUD_UPLOAD" size="20" />
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnclr" layoutX="294.0" layoutY="701.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="127.0" styleClass="send" stylesheets="@../application/application.css" text="  Clear Chat" textFill="#fffdfd">
+         <graphic>
+            <FontAwesomeIcon fill="#f5f3f3" glyphName="TRASH" size="20" />
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <VBox fx:id="v1" layoutX="927.0" layoutY="486.0" prefHeight="229.0" prefWidth="426.0" style="-fx-background-color: #A8D4F2;" />
+      <Label fx:id="labrecvfile" alignment="CENTER" layoutX="1027.0" layoutY="436.0" prefHeight="51.0" prefWidth="247.0" text="Recieved Files">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <Pane fx:id="gifpane" prefHeight="740.0" prefWidth="1375.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="192.0" fitWidth="196.0" layoutX="590.0" layoutY="234.0">
+               <image>
+                  <Image url="@../../../MychatC/src/Spin-1s-200px.gif" />
+               </image>
+            </ImageView>
+            <Label layoutX="519.0" layoutY="426.0" text="Connecting....." textFill="#fe8a94">
+               <font>
+                  <Font size="55.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+  
+   </children>
+</AnchorPane>
